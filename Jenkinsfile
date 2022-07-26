@@ -1,11 +1,12 @@
 pipeline {
     agent any
-    
-    stage('build'){
-        steps {
-            
-            sh "./gradlew build --no-daemon"
-            
+    stages {
+        stage('build'){
+            steps {
+
+                sh "./gradlew build --no-daemon"
+
+            }
         }
     }
 }
